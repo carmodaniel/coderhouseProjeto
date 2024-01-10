@@ -3,7 +3,8 @@ Até a fase em que o projeto se encontra hoje 10/01/2024 18:5 é necessário a u
 `requests` necessário para ler as APIS. <br>
 `pandas` para transformar os dados das APIS em dataframes e tratar esses dados.<br>
 `plyer` realizar a notificação caso de algum erro para receber os dados das APIS.<br>
-`sqlite3` salvar dataframe em um banco de dados.<br><br>
+`sqlite3` salvar dataframe em um banco de dados.
+`matplotlib` gerar gráfico<br><br>
 versões: <br>
 requests==2.31.0<br>
 pandas==2.1.4<br>
