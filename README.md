@@ -1,5 +1,5 @@
 # Pacotes necessários para o projeto
-Até a fase em que o projeto se encontra hoje 28/12/2023 18:00 é necessário a utilização dos pacotes, conforme requirements.txt:<br>
+Até a fase em que o projeto se encontra hoje 10/01/2024 18:5 é necessário a utilização dos pacotes, conforme requirements.txt:<br>
 `requests` necessário para ler as APIS. <br>
 `pandas` para transformar os dados das APIS em dataframes e tratar esses dados.<br>
 `plyer` realizar a notificação caso de algum erro para receber os dados das APIS.<br>
@@ -9,6 +9,7 @@ requests==2.31.0<br>
 pandas==2.1.4<br>
 DateTime==5.4<br>
 plyer==2.1.0<br>
+matplotlib==3.8.2
 <strong>Observação:<i>O pacote sqlite3 não é neceessário instalação pois já e nativo do python</i></strong>
 
 # projetoFinal
@@ -19,7 +20,7 @@ URL_moedas_comemorativas<br>
 
 ## No projeto final utilizado três APIS do Banco Central
 [API - Dinheiro em Circulação](https://olinda.bcb.gov.br/olinda/servico/mecir_dinheiro_em_circulacao/versao/v1/odata/informacoes_diarias_com_categoria?$format=json) <br>
-[Documentação - API - Dinheiro em Circulação](https://dadosabertos.bcb.gov.br/dataset/chancelas-de-cedulas-nacionais-produzidas)<br>
+[Documentação - API - Dinheiro em Circulação](https://dadosabertos.bcb.gov.br/dataset/dinheiro-em-circulao)<br>
 Informações diárias das quantidades de cédulas e moedas em circulação (não estão incluídas as moedas comemorativas). As informações estão separadas para cada espécie (cédula ou moeda) e denominação do Real (símbolos : R$, BRL) <br><br>
 
 [API - Chancelas de cédulas nacionais produzidas](https://olinda.bcb.gov.br/olinda/servico/mecir_chancelas/versao/v1/odata/TodosDadosChancelas?$format=json)<br>
@@ -53,4 +54,13 @@ Criado um dicionário de mapeamento com base na coluna 'Titulo' do dataframe dad
 Apartir  do dataframe `dincircu_moedCome` criado o banco de dados `projetoFinal.db`, feito leitura e exibição das tabelas do banco de dados.<br><br>
 
 ### 4ª Fase.
-<mark>Para o projeto final o dataframe dincircu_moedCome será utilizado para demostrar dados.</mark>
+
+Para Facilitar o entendimento das informações foi criado o dicionário `nome_mes` para exibir e ordernar os meses utilizado  no dincircu_moedCome.<br>
+
+
+Para exibir somente os valores em circulação cuja Espécie seja igual a Moeda criado o dataframe `moeda`, nesse dataframe foi executado o agrupamento para exibir o valor em circulação por Mês <br>
+Também criado o dataframe `cedula` que somente exibi informação de Espécie igual Cédula, também agrupado a exibição por mês.<br>
+
+O intuído da criação dos dataframes `moeda` e `cedula` é exibir a quantidade  de dinheiro que foi circulado por mês para os dois tipos de Espécie.<br>
+
+Como a documentação da API não informa qual é a separação decimal dos valores optamos em não exibir em gráfico para não  ter distorção dos valores que existem.<br>
