@@ -10,7 +10,7 @@ requests==2.31.0<br>
 pandas==2.1.4<br>
 DateTime==5.4<br>
 plyer==2.1.0<br>
-matplotlib==3.8.2
+matplotlib==3.8.2<br>
 <strong>Observação:<i>O pacote sqlite3 não é neceessário instalação pois já e nativo do python</i></strong>
 
 # projetoFinal
